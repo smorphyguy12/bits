@@ -1,87 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="utf-8" />
-    <title>BITS - Bontoc Information Technology Society</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="" name="description" />
-    <meta content="" name="author" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    <!-- App favicon -->
-    <link rel="shortcut icon" href="images/favicon.ico">
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-
-    <!--Material Icon -->
-    <link rel="stylesheet" type="text/css" href="css/materialdesignicons.min.css" />
-
-    <!-- Custom  sCss -->
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-
-    <script src="js/jquery.min.js"></script>
-
-    <!-- Lightbox css -->
-    <link href="libs/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css" />
-</head>
-
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="78">
-
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky-dark" id="sticky">
-        <div class="container-fluid">
-            <!-- LOGO -->
-            <a class="logo text-uppercase" href="#">
-                <img src="images/logo-light.png" alt="" class="logo-light" height="55" />
-                <img src="images/logo-dark.png" alt="" class="logo-dark" height="70" width="200" />
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="mdi mdi-menu"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mx-auto navbar-center" id="mySidenav">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#discover" class="nav-link">Discover</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#gallery" class="nav-link">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#faculty-staff" class="nav-link">Faculty/Staff</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#officers" class="nav-link">Officers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#services" class="nav-link">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#news" class="nav-link">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link">Contact</a>
-                    </li>
-                </ul>
-                <a class="logo text-uppercase ms-auto" href="#">
-                    <img src="images/bits-logo.jpg" alt="BITS Logo" class="logo-light rounded-circle"
-                        height="63" />
-                    <img src="images/bits-logo.jpg" alt="BITS Logo" class="logo-dark rounded-circle"
-                        height="63" />
-                </a>
-            </div>
-        </div>
-    </nav>
-    <!-- Navbar End -->
+@section('content')
+    @include('partials.chatbot')
 
     <!-- Hero Section -->
     <!-- Main landing section with organization title, description and call-to-action -->
@@ -362,8 +282,8 @@
                         <div class="card-body p-0">
                             <a href="{{ asset('images/comp-lab/IMG_20240422_173414.jpg') }}" class="image-popup">
                                 <div class="gallery-img-wrapper">
-                                    <img src="{{ asset('images/comp-lab/IMG_20240422_173414.jpg') }}"
-                                        class="img-fluid" alt="Computer Laboratory">
+                                    <img src="{{ asset('images/comp-lab/IMG_20240422_173414.jpg') }}" class="img-fluid"
+                                        alt="Computer Laboratory">
                                     <div class="gallery-overlay">
                                         <div class="gallery-overlay-content">
                                             <h5 class="text-white mb-0">Computer Laboratory 2</h5>
@@ -398,8 +318,8 @@
                         <div class="card-body p-0">
                             <a href="{{ asset('images/alumni/Meode, Hazel Jay.jpeg') }}" class="image-popup">
                                 <div class="gallery-img-wrapper">
-                                    <img src="{{ asset('images/alumni/Meode, Hazel Jay.jpeg') }}"
-                                        class="img-fluid" alt="Meode, Hazel Jay">
+                                    <img src="{{ asset('images/alumni/Meode, Hazel Jay.jpeg') }}" class="img-fluid"
+                                        alt="Meode, Hazel Jay">
                                     <div class="gallery-overlay">
                                         <div class="gallery-overlay-content">
                                             <h5 class="text-white mb-0">Meode, Hazel Jay</h5>
@@ -436,7 +356,7 @@
 
     <!-- Faculty and Staff Section -->
     <!-- Profile cards of teaching and administrative staff -->
-    <section class="section p-0 bg-gradient" id="faculty-staff">
+    {{-- <section class="section p-0 bg-gradient" id="faculty-staff">
         <div class="bg-shape">
             <img src="images/bg-shape.png" alt="" class="img-fluid mx-auto d-block">
         </div>
@@ -538,11 +458,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Student Officers Section -->
     <!-- Current BITS organization officers and representatives -->
-    <section class="section bg-light" id="officers">
+    {{-- <section class="section bg-light" id="officers">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-12">
@@ -648,8 +568,8 @@
                     <div class="card officer-card">
                         <div class="card-body text-center">
                             <div class="officer-avatar mb-3">
-                                <img src="images/officers/Daniel,Rufa Mae-3B Representative.png"
-                                    class="rounded-circle" alt="profile-image">
+                                <img src="images/officers/Daniel,Rufa Mae-3B Representative.png" class="rounded-circle"
+                                    alt="profile-image">
                             </div>
                             <h4>Rufa Mae Daniel</h4>
                             <p class="designation mb-3">Representative</p>
@@ -666,8 +586,8 @@
                     <div class="card officer-card">
                         <div class="card-body text-center">
                             <div class="officer-avatar mb-3">
-                                <img src="images/officers/Oclarit,Annalou-2B Representative.png"
-                                    class="rounded-circle" alt="profile-image">
+                                <img src="images/officers/Oclarit,Annalou-2B Representative.png" class="rounded-circle"
+                                    alt="profile-image">
                             </div>
                             <h4>Annalou Oclarit</h4>
                             <p class="designation mb-3">Representative</p>
@@ -684,8 +604,8 @@
                     <div class="card officer-card">
                         <div class="card-body text-center">
                             <div class="officer-avatar mb-3">
-                                <img src="images/officers/Valenzuela,Klaire-1B Representative.png"
-                                    class="rounded-circle" alt="profile-image">
+                                <img src="images/officers/Valenzuela,Klaire-1B Representative.png" class="rounded-circle"
+                                    alt="profile-image">
                             </div>
                             <h4>Klaire Valenzuela</h4>
                             <p class="designation mb-3">Representative</p>
@@ -700,7 +620,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Services Section -->
     <!-- Technology services and solutions offered by BITS -->
@@ -907,8 +827,8 @@
 
                             <div class="row">
                                 <div class="col-lg-12 text-end">
-                                    <input type="submit" id="submit" name="send"
-                                        class="submitBnt btn btn-blue" value="Send Message">
+                                    <input type="submit" id="submit" name="send" class="submitBnt btn btn-blue"
+                                        value="Send Message">
                                 </div>
                             </div>
                             <!-- end row -->
@@ -924,180 +844,57 @@
     </section>
     <!-- contact end -->
 
-    <!-- Call to Action Section -->
-    <!-- Final prompt encouraging visitors to learn more -->
-    <section class="section-sm bg-light">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-md-9">
-                    <h3 class="mb-0 mo-mb-20">Want to learn more about our services and programs?</h3>
-                </div>
-                <div class="col-md-3">
-                    <div class="text-md-end">
-                        <a href="#" class="btn btn-outline-dark rounded-pill"><i
-                                class="mdi mdi-email-outline me-1"></i> Contact Us</a>
-                    </div>
-                </div>
-            </div>
-            <!-- end row -->
-        </div>
-        <!-- end container-fluid -->
-    </section>
-    <!-- cta end -->
+    @include('partials.contact')
+@endsection
 
-    <!-- Footer -->
-    <!-- Site footer with quick links, social media, location and copyright -->
-    <footer class="bg-dark footer">
-        <div class="container-fluid">
-            <div class="row mb-5">
-                <!-- Logo & About Column -->
-                <div class="col-lg-4">
-                    <div class="pe-lg-4">
-                        <div class="footer-logos d-flex align-items-center mb-4">
-                            <img src="images/bits-logo.jpg" alt="BITS Logo" class="rounded-circle me-3"
-                                height="70">
-                            <img src="images/logo-light.png" alt="SLSU Logo" height="70">
-                        </div>
-                        <p class="text-white-50 mb-4">
-                            Empowering students through technology and innovation at Southern Leyte State University
-                            -
-                            Bontoc Campus.
-                        </p>
-                    </div>
-                </div>
 
-                <!-- Quick Links Column -->
-                <div class="col-lg-2 col-md-6">
-                    <div class="footer-list">
-                        <p class="text-white mb-3 footer-list-title fw-bold">Quick Links</p>
-                        <ul class="list-unstyled">
-                            <li><a href="#about"><i class="mdi mdi-chevron-right me-2"></i>About Us</a></li>
-                            <li><a href="#services"><i class="mdi mdi-chevron-right me-2"></i>Services</a></li>
-                            <li><a href="#gallery"><i class="mdi mdi-chevron-right me-2"></i>Gallery</a></li>
-                            <li><a href="#contact"><i class="mdi mdi-chevron-right me-2"></i>Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
+@push('scripts')
 
-                <!-- Social Media Column -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-list">
-                        <p class="text-white mb-3 footer-list-title fw-bold">Connect With Us</p>
-                        <ul class="list-unstyled social-links">
-                            <li class="mb-2">
-                                <a href="https://www.facebook.com/slsubitsofficial/" target="_blank">
-                                    <i class="mdi mdi-facebook me-2"></i>BITS Official Page
-                                </a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="mailto:bits.slsu.bc@gmail.com">
-                                    <i class="mdi mdi-email me-2"></i>bits.slsu.bc@gmail.com
-                                </a>
-                            </li>
-                            <li>
-                                <a href="tel:09989791809">
-                                    <i class="mdi mdi-phone me-2"></i>0998 979 1809
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Location Column -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-list">
-                        <p class="text-white mb-3 footer-list-title fw-bold">Location</p>
-                        <div class="text-white-50">
-                            <p class="mb-2"><i class="mdi mdi-map-marker me-2"></i>San Ramon, Bontoc</p>
-                            <p>Southern Leyte, Philippines</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Copyright Row -->
-            <div class="row pt-4 border-top border-secondary">
-                <div class="col-lg-6 col-md-12">
-                    <p class="text-white-50 mb-md-2 mb-lg-0">
-                        &copy;
-                        <script>
-                            document.write(new Date().getFullYear())
-                        </script> BITS SLSU-BC. All rights reserved.
-                    </p>
-                </div>
-                <div class="col-lg-6 col-md-12">
-                    <div class="text-md-end text-white-50">
-                        <span>Developed with <i class="mdi mdi-heart text-danger"></i> by Mark Steven B.
-                            Peligro</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- footer end -->
-
-    <!-- Back to top -->
-    <!-- <a href="#" class="back-to-top" id="back-to-top"> <i class="mdi mdi-chevron-up"> </i> </a> -->
-    <!-- Back to top -->
-    <a href="#" onclick="topFunction()" class="back-to-top-btn btn btn-blue" id="back-to-top-btn"><i
-            class="mdi mdi-chevron-up"></i></a>
-
-    <!-- JavaScript Dependencies -->
-    <script src="js/bootstrap.bundle.min.js"></script>
-
-    <!-- Magnific Popup-->
-    <script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-    <!-- custom js -->
-    <script src="js/app.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            $(".image-popup").magnificPopup({
-                    type: "image",
-                    closeOnContentClick: !1,
-                    closeBtnInside: !1,
-                    mainClass: "mfp-with-zoom mfp-img-mobile",
-                    image: {
-                        verticalFit: !0,
-                        titleSrc: function(e) {
-                            return e.el.attr("title");
-                        },
+<script>
+    $(document).ready(function() {
+        $(".image-popup").magnificPopup({
+                type: "image",
+                closeOnContentClick: !1,
+                closeBtnInside: !1,
+                mainClass: "mfp-with-zoom mfp-img-mobile",
+                image: {
+                    verticalFit: !0,
+                    titleSrc: function(e) {
+                        return e.el.attr("title");
                     },
-                    gallery: {
-                        enabled: !0
+                },
+                gallery: {
+                    enabled: !0
+                },
+                zoom: {
+                    enabled: !0,
+                    duration: 300,
+                    opener: function(e) {
+                        return e.find("img");
                     },
-                    zoom: {
-                        enabled: !0,
-                        duration: 300,
-                        opener: function(e) {
-                            return e.find("img");
-                        },
-                    },
-                }),
-                $(".filter-menu .filter-menu-item").click(function() {
-                    $(".filter-menu .filter-menu-item").removeClass("active"),
-                        $(this).addClass("active");
-                }),
-                $(function() {
-                    var e;
-                    $(".filter-menu-item").click(function() {
-                        (e = $(this).attr("data-rel")),
-                        $(".filterable-content").fadeTo(100, 0),
-                            $(".filterable-content .filter-item")
-                            .not("." + e)
-                            .fadeOut()
-                            .removeClass(""),
-                            setTimeout(function() {
-                                $("." + e)
-                                    .fadeIn()
-                                    .addClass(""),
-                                    $(".filterable-content").fadeTo(300, 1);
-                            }, 300);
-                    });
+                },
+            }),
+            $(".filter-menu .filter-menu-item").click(function() {
+                $(".filter-menu .filter-menu-item").removeClass("active"),
+                    $(this).addClass("active");
+            }),
+            $(function() {
+                var e;
+                $(".filter-menu-item").click(function() {
+                    (e = $(this).attr("data-rel")),
+                    $(".filterable-content").fadeTo(100, 0),
+                        $(".filterable-content .filter-item")
+                        .not("." + e)
+                        .fadeOut()
+                        .removeClass(""),
+                        setTimeout(function() {
+                            $("." + e)
+                                .fadeIn()
+                                .addClass(""),
+                                $(".filterable-content").fadeTo(300, 1);
+                        }, 300);
                 });
-        });
-    </script>
-</body>
-
-</html>
+            });
+    });
+</script>
+@endpush
